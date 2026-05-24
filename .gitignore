@@ -1,0 +1,6 @@
+node_modules/
+dist/
+site/node_modules/
+site/dist/
+.playwright-mcp/
+.DS_Store
