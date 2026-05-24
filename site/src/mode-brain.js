@@ -287,7 +287,7 @@ function initModeShowcase(showcase, brain) {
         if (readout.questions && mode.questions) {
             readout.questions.innerHTML = [
                 ...mode.questions,
-                'then ask why.',
+                'and more.',
             ].map(q => `<li>${q}</li>`).join('');
         }
 
@@ -323,6 +323,83 @@ function initExamplesShowcase(showcase, brain) {
         chain: showcase.querySelector('[data-example-chain]'),
     };
     let activeExampleId = '';
+    let exampleLayoutFrame = 0;
+    let measuredExampleWidth = 0;
+
+    const createMeasureChainStep = (step) => {
+        const mode = MODE_DETAILS[step.mode];
+        const item = document.createElement('li');
+        const button = document.createElement('button');
+        const name = document.createElement('span');
+        const note = document.createElement('span');
+
+        button.type = 'button';
+        button.className = 'example-chain-step';
+        button.dataset.chainMode = step.mode;
+        button.style.setProperty('--mode-color', mode?.color || '#17100b');
+        name.className = 'example-chain-name';
+        note.className = 'example-chain-note';
+        name.textContent = mode?.title || step.mode;
+        note.textContent = step.note;
+
+        button.append(name, note);
+        item.append(button);
+        return item;
+    };
+
+    const syncExampleLayout = () => {
+        if (!readout.panel || !readout.description || !readout.chain) return;
+
+        const descriptionWidth = Math.round(readout.description.getBoundingClientRect().width);
+        const chainWidth = Math.round(readout.chain.getBoundingClientRect().width);
+        if (!descriptionWidth || !chainWidth) return;
+
+        const currentText = readout.description.textContent;
+        const currentMinHeight = readout.description.style.minHeight;
+        let maxDescriptionHeight = 0;
+        let maxChainHeight = 0;
+        const measureChain = document.createElement('ol');
+
+        readout.description.style.minHeight = '0px';
+        readout.panel.style.removeProperty('--example-chain-height');
+        measureChain.className = 'example-chain';
+        measureChain.style.position = 'absolute';
+        measureChain.style.visibility = 'hidden';
+        measureChain.style.pointerEvents = 'none';
+        measureChain.style.inset = '0 auto auto 0';
+        measureChain.style.width = `${chainWidth}px`;
+        readout.panel.append(measureChain);
+
+        Object.values(EXAMPLE_DETAILS).forEach((example) => {
+            readout.description.textContent = example.description;
+            maxDescriptionHeight = Math.max(
+                maxDescriptionHeight,
+                readout.description.getBoundingClientRect().height
+            );
+
+            measureChain.replaceChildren(...example.chain.map(createMeasureChainStep));
+            maxChainHeight = Math.max(
+                maxChainHeight,
+                measureChain.getBoundingClientRect().height
+            );
+        });
+
+        measureChain.remove();
+        readout.description.textContent = currentText;
+        readout.description.style.minHeight = currentMinHeight;
+        readout.panel.style.setProperty('--example-description-height', `${Math.ceil(maxDescriptionHeight)}px`);
+        readout.panel.style.setProperty('--example-chain-height', `${Math.ceil(maxChainHeight)}px`);
+        measuredExampleWidth = descriptionWidth;
+    };
+
+    const requestExampleLayoutSync = () => {
+        if (exampleLayoutFrame) return;
+
+        exampleLayoutFrame = window.requestAnimationFrame(() => {
+            exampleLayoutFrame = 0;
+            syncExampleLayout();
+        });
+    };
 
     const activateExampleChain = () => {
         const example = EXAMPLE_DETAILS[activeExampleId];
@@ -412,6 +489,20 @@ function initExamplesShowcase(showcase, brain) {
             next.focus();
         });
     });
+
+    if (readout.description && 'ResizeObserver' in window) {
+        const descriptionResizeObserver = new ResizeObserver(() => {
+            const descriptionWidth = Math.round(readout.description.getBoundingClientRect().width);
+            if (descriptionWidth && descriptionWidth !== measuredExampleWidth) {
+                requestExampleLayoutSync();
+            }
+        });
+
+        descriptionResizeObserver.observe(readout.description);
+    }
+
+    document.fonts?.ready.then(requestExampleLayoutSync);
+    syncExampleLayout();
 
     const visibilityObserver = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {

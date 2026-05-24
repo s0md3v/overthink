@@ -1013,7 +1013,7 @@ opacity: 1;
 }
 
 .example-chain-readout [data-example-description] {
-    min-height: 4.9rem;
+    min-height: var(--example-description-height, 4.95rem);
 }
 
 .example-chain-readout {
@@ -1028,7 +1028,7 @@ opacity: 1;
     display: grid;
     gap: 0.05rem;
     align-content: start;
-    min-height: clamp(20.75rem, 23vw, 22rem);
+    min-height: var(--example-chain-height, clamp(20.75rem, 23vw, 22rem));
     margin: 0.9rem 0 0;
     padding: 0;
     list-style: none;
@@ -1557,7 +1557,7 @@ opacity: 1;
 
 @media (max-width: 1360px) {
     .example-chain-readout [data-example-description] {
-        min-height: 6.1rem;
+        min-height: var(--example-description-height, 6.1rem);
     }
 }
 
@@ -1634,14 +1634,14 @@ opacity: 1;
     }
 
     .example-chain-readout [data-example-description] {
-        min-height: 6.4rem;
+        min-height: var(--example-description-height, 6.5rem);
     }
 
 }
 
 @media (max-width: 1040px) and (min-width: 821px) {
     .example-chain-readout [data-example-description] {
-        min-height: 7.7rem;
+        min-height: var(--example-description-height, 7.7rem);
     }
 }
 
@@ -1681,7 +1681,7 @@ opacity: 1;
     }
 
     .example-chain-readout [data-example-description] {
-        min-height: 4.4rem;
+        min-height: var(--example-description-height, 4.4rem);
     }
 }
 
@@ -1985,7 +1985,7 @@ opacity: 1;
     }
 
     .example-chain-readout [data-example-description] {
-        min-height: 6rem;
+        min-height: var(--example-description-height, 7.5rem);
     }
 
     .example-chain-readout {
