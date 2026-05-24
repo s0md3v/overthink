@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overthink - make agents think before they answer</title>
+    <meta name="description"
+        content="Overthink is a skill that makes coding agents slow down when guessing is risky: research, debugging, hard choices, taste, and decisions.">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/logo.svg">
+    <!-- Google Fonts: EB Garamond for classical headings, Lexend for modern structured body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Lexend:wght@300;400;500&display=swap"
+        rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-D6q8s7v-.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-T9QW1TgM.css">
+</head>
+
+<body>
+    <main class="hero-section">
+        <!-- Handwritten Notes Overlay (Viewport relative) -->
+        <div class="handwritten-notes">
+            <!-- Orient -->
+            <span class="note p-orient-1">Task: explain overthink without sounding boring</span>
+            <span class="note p-orient-2">Goal: show the thinking on the page</span>
+
+            <!-- Model -->
+            <span class="note p-model-1">Box = { R, A, C, O, H, U, N }</span>
+            <span class="note p-model-2">R (Representation): hero, headline, install button</span>
+            <span class="note p-model-3 mistake">A (Assumptions): people read long copy</span>
+            <span class="note p-model-4">C (Constraints): one page, no JS frameworks</span>
+            <span class="note p-model-5">O (Options): static copy vs. live demo</span>
+            <span class="note p-model-6">H (Heuristics): if it can be shown, show it</span>
+            <span class="note p-model-7">U (Use): visitor gets it in 5 seconds</span>
+            <span class="note p-model-8 mistake-2">N (Norms): product pages pretend agents are magic</span>
+
+            <!-- Evaluate & Create (Fan out) -->
+            <span class="note p-eval-1">Problem: a normal landing page would hide the hard part</span>
+            <span class="note p-eval-2">Options:</span>
+            <span class="note p-eval-3">1. write benefits like everyone else (bad)</span>
+            <span class="note p-eval-4">2. show the thinking on the page</span>
+
+            <!-- Decide -->
+            <span class="note p-frame-1">break frame!</span>
+            <span class="note p-decide">use the page as the example.<br>show the thinking.</span>
+        </div>
+
+        <!-- Left Side: Minimalist, Typography-driven -->
+        <section class="hero-left">
+            <nav class="top-nav">
+                <a href="https://github.com/s0md3v/overthink" class="logo logo-link" target="_blank"
+                    rel="noopener">
+                    <svg class="brand-mark" width="32" height="29" viewBox="0 0 38.383751 34.256113"
+                        aria-hidden="true" focusable="false">
+                        <g transform="translate(-80.393053,-102.2403)">
+                            <path class="brand-slash"
+                                d="m 108.69929,108.09923 c 0.254,-0.44026 0.381,-0.89746 0.381,-1.3716 0,-0.27094 -0.0508,-0.48261 -0.1524,-0.63501 l -1.26153,-3.62372 c -0.0847,-0.1524 -0.2032,-0.2286 -0.3556,-0.2286 -0.28787,0 -0.5588,0.22013 -0.8128,0.6604 l -16.103595,27.88919 c -0.2032,0.3556 -0.3048,0.74507 -0.3048,1.1684 0,0.28787 0.0508,0.51647 0.1524,0.6858 l 1.261532,3.62373 c 0.08467,0.1524 0.211667,0.2286 0.381,0.2286 0.270934,0 0.5334,-0.22013 0.7874,-0.6604 z" />
+                            <g transform="translate(-0.564158)">
+                                <path class="brand-zero brand-zero-left"
+                                    d="m 89.415411,112.66276 c -0.338667,0 -0.702733,0.11853 -1.0922,0.3556 -0.372533,0.23707 -0.651933,0.52493 -0.8382,0.8636 l -6.35,10.9728 c -0.118533,0.22013 -0.1778,0.42333 -0.1778,0.6096 0,0.4064 0.237067,0.6096 0.7112,0.6096 h 8.602133 c 0.321733,0 0.668867,-0.11853 1.0414,-0.3556 0.389467,-0.23707 0.677333,-0.52493 0.8636,-0.8636 l 6.349997,-10.9728 c 0.11853,-0.22013 0.1778,-0.42333 0.1778,-0.6096 0,-0.4064 -0.2286,-0.6096 -0.6858,-0.6096 z m -0.829733,10.9728 c -0.186267,0.33867 -0.474133,0.62653 -0.8636,0.8636 -0.372533,0.23707 -0.728133,0.3556 -1.0668,0.3556 v 0 c -0.4572,0 -0.6858,-0.2032 -0.6858,-0.6096 0,-0.18627 0.05927,-0.38947 0.1778,-0.6096 l 4.927599,-8.5344 c 0.2032,-0.33867 0.491067,-0.62653 0.8636,-0.8636 0.372533,-0.23707 0.728133,-0.3556 1.0668,-0.3556 v 0 c 0.4572,0 0.6858,0.2032 0.6858,0.6096 0,0.18627 -0.05927,0.38947 -0.1778,0.6096 z" />
+                                <path class="brand-zero brand-zero-right"
+                                    d="m 110.05298,112.66276 c -0.33867,0 -0.70274,0.11853 -1.09221,0.3556 -0.37253,0.23707 -0.65193,0.52493 -0.8382,0.8636 l -6.35004,10.9728 c -0.11853,0.22013 -0.1778,0.42333 -0.1778,0.6096 0,0.4064 0.23707,0.6096 0.71121,0.6096 h 8.60218 c 0.32173,0 0.66887,-0.11853 1.0414,-0.3556 0.38947,-0.23707 0.67734,-0.52493 0.86361,-0.8636 l 6.35003,-10.9728 c 0.11853,-0.22013 0.1778,-0.42333 0.1778,-0.6096 0,-0.4064 -0.2286,-0.6096 -0.6858,-0.6096 z m -0.82974,10.9728 c -0.18627,0.33867 -0.47413,0.62653 -0.8636,0.8636 -0.37254,0.23707 -0.72814,0.3556 -1.06681,0.3556 v 0 c -0.4572,0 -0.6858,-0.2032 -0.6858,-0.6096 0,-0.18627 0.0593,-0.38947 0.1778,-0.6096 l 4.92763,-8.5344 c 0.2032,-0.33867 0.49107,-0.62653 0.8636,-0.8636 0.37253,-0.23707 0.72814,-0.3556 1.0668,-0.3556 v 0 c 0.45721,0 0.68581,0.2032 0.68581,0.6096 0,0.18627 -0.0593,0.38947 -0.1778,0.6096 z" />
+                            </g>
+                        </g>
+                        <path class="brand-infinity"
+                            d="M 7.6 17.15 C 7.6 10.85 15.6 10.85 19.19 17.15 C 22.78 23.45 30.95 23.45 30.95 17.15 C 30.95 10.85 22.78 10.85 19.19 17.15 C 15.6 23.45 7.6 23.45 7.6 17.15" />
+                    </svg>
+                    <span>overthink</span>
+                </a>
+            </nav>
+            <div class="content">
+                <h1>Force agents to <br>think it through.</h1>
+                <p>Overthink makes agents research, get creative, explore multiple angles, and evaluate tradeoffs and consequences without you having to ask.</p>
+                <div class="cta-section">
+                    <button class="btn-primary">Install</button>
+                    <div class="hero-logos-inline">
+                        <span class="hero-logos-label">Works with these and more.</span>
+                        <div class="hero-logos-row">
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="Claude Code"><img
+                                    src="assets/works-with/claude-logo.png" alt="Claude Code" width="24" height="24"
+                                    loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="Gemini CLI"><img
+                                    src="assets/works-with/gemini-logo.svg" alt="Gemini CLI" width="20" height="20"
+                                    loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="Codex CLI"><img
+                                    src="assets/works-with/openai-logo.png" alt="Codex CLI" width="20" height="20"
+                                    loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="Cursor"><img
+                                    src="assets/works-with/cursor-logo.png" alt="Cursor" width="24" height="24"
+                                    loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="VS Code Copilot"><img
+                                    src="assets/works-with/github-logo.png" alt="VS Code Copilot" width="20" height="20"
+                                    loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="Antigravity"><img
+                                    src="assets/works-with/antigravity-logo.png" alt="Antigravity" width="20"
+                                    height="20" loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="Zed"><img
+                                    src="assets/works-with/zed-logo.png" alt="Zed" width="20" height="20"
+                                    loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="OpenCode"><img
+                                    src="assets/works-with/opencode-logo.png" alt="OpenCode" width="20" height="20"
+                                    loading="lazy"></span>
+                            <span class="hero-logo-icon has-tooltip" data-tooltip="Pi"><img
+                                    src="assets/works-with/pi-logo.svg" alt="Pi" width="20" height="20" loading="lazy"
+                                    style="background:#1a1a1a;border-radius:50%;padding:3px"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Side: Imagery and Process Animations -->
+        <section class="hero-right">
+            <div class="visual-container">
+                <figure class="hypatia-figure">
+                    <picture>
+                        <source media="(min-width: 681px)" srcset="assets/brand/hypatia.webp" type="image/webp">
+                        <source media="(min-width: 681px)" srcset="assets/brand/hypatia.png" type="image/png">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Hypatia of Alexandria" class="hypatia-image">
+                    </picture>
+                    <figcaption class="hypatia-caption">Hypatia of Alexandria</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <section class="modes-manual-section field-section" id="modes" aria-labelledby="modes-title">
+        <div class="field-shell">
+            <div class="chapter-heading modes-heading">
+                <h2 id="modes-title">How does it work?</h2>
+                <p>It gives the agent a few ways to think. The agent uses the ones that fit the task.</p>
+            </div>
+
+            <div class="mode-neuro-showcase" data-mode-showcase aria-label="Interactive overthink thinking modes">
+                <div class="mode-list" role="list" aria-label="Select a thinking mode">
+                    <button class="mode-list-button is-active" type="button" data-mode="model"
+                        aria-pressed="true">Model</button>
+                    <button class="mode-list-button" type="button" data-mode="create"
+                        aria-pressed="false">Create</button>
+                    <button class="mode-list-button" type="button" data-mode="diagnose"
+                        aria-pressed="false">Diagnose</button>
+                    <button class="mode-list-button" type="button" data-mode="verify"
+                        aria-pressed="false">Verify</button>
+                    <button class="mode-list-button" type="button" data-mode="evaluate"
+                        aria-pressed="false">Evaluate</button>
+                    <button class="mode-list-button" type="button" data-mode="decide"
+                        aria-pressed="false">Decide</button>
+                    <button class="mode-list-button" type="button" data-mode="taste" aria-pressed="false">Taste</button>
+                    <button class="mode-list-button" type="button" data-mode="synthesize"
+                        aria-pressed="false">Synthesize</button>
+                </div>
+
+                <div class="brain-slot" data-brain-slot="modes">
+                    <div class="brain-stage" data-brain-stage data-shared-brain-stage>
+                        <canvas class="brain-canvas" data-brain-canvas
+                            aria-label="Particle brain animation responding to the selected thinking mode"></canvas>
+                    </div>
+                </div>
+
+                <aside class="mode-readout" aria-live="polite" aria-label="Selected thinking mode introduction">
+                    <h3 data-mode-title>Model</h3>
+                    <p data-mode-description>Before solving, name the inputs, state, rules, limits, and assumptions.</p>
+                    <div class="mode-questions-wrapper">
+                        <span class="section-label">Questions it asks</span>
+                        <ul data-mode-questions>
+                            <li>"What are the hidden assumptions?"</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="examples-section field-section" id="examples" aria-labelledby="examples-title">
+        <div class="field-shell">
+            <div class="chapter-heading modes-heading">
+                <h2 id="examples-title">Examples</h2>
+                <p>Pick a task. The chain changes because the problem changes.</p>
+            </div>
+
+            <div class="mode-neuro-showcase examples-neuro-showcase" data-examples-showcase
+                aria-label="Example thinking chains">
+                <div class="mode-list example-list" role="tablist" aria-label="Examples">
+                    <button class="mode-list-button example-option is-active" id="example-tab-product" type="button"
+                        role="tab" data-example-target="product" aria-controls="example-readout" aria-selected="true">
+                        Product feature
+                    </button>
+                    <button class="mode-list-button example-option" id="example-tab-research" type="button" role="tab"
+                        data-example-target="research" aria-controls="example-readout" aria-selected="false"
+                        tabindex="-1">
+                        Research
+                    </button>
+                    <button class="mode-list-button example-option" id="example-tab-logo" type="button" role="tab"
+                        data-example-target="logo" aria-controls="example-readout" aria-selected="false" tabindex="-1">
+                        Logo design
+                    </button>
+                    <button class="mode-list-button example-option" id="example-tab-business" type="button" role="tab"
+                        data-example-target="business" aria-controls="example-readout" aria-selected="false"
+                        tabindex="-1">
+                        Business decision
+                    </button>
+                </div>
+
+                <div class="brain-slot example-brain-slot" data-brain-slot="examples"></div>
+
+                <aside class="mode-readout example-chain-readout" id="example-readout" role="tabpanel"
+                    aria-live="polite" aria-labelledby="example-tab-product">
+                    <h3 data-example-title>Product feature</h3>
+                    <p data-example-description>A feature idea usually starts as a vague feeling. Overthink turns it into a user, a promise, a few ways it can fail, and one next build.</p>
+                    <div class="mode-questions-wrapper example-chain-wrapper">
+                        <span class="section-label">Mode chain</span>
+                        <ol class="example-chain" data-example-chain></ol>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="install-section field-section" id="install" aria-labelledby="install-title">
+        <div class="field-shell">
+            <div class="install-heading-row">
+                <div class="chapter-heading modes-heading">
+                    <h2 id="install-title">Install</h2>
+                </div>
+                <div class="hero-logos-inline install-logos" aria-label="Works with supported agents">
+                    <span class="hero-logos-label">Works with these and more.</span>
+                    <div class="hero-logos-row">
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="Claude Code"><img
+                                src="assets/works-with/claude-logo.png" alt="Claude Code" width="24" height="24"
+                                loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="Gemini CLI"><img
+                                src="assets/works-with/gemini-logo.svg" alt="Gemini CLI" width="20" height="20"
+                                loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="Codex CLI"><img
+                                src="assets/works-with/openai-logo.png" alt="Codex CLI" width="20" height="20"
+                                loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="Cursor"><img
+                                src="assets/works-with/cursor-logo.png" alt="Cursor" width="24" height="24"
+                                loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="VS Code Copilot"><img
+                                src="assets/works-with/github-logo.png" alt="VS Code Copilot" width="20" height="20"
+                                loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="Antigravity"><img
+                                src="assets/works-with/antigravity-logo.png" alt="Antigravity" width="20"
+                                height="20" loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="Zed"><img
+                                src="assets/works-with/zed-logo.png" alt="Zed" width="20" height="20"
+                                loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="OpenCode"><img
+                                src="assets/works-with/opencode-logo.png" alt="OpenCode" width="20" height="20"
+                                loading="lazy"></span>
+                        <span class="hero-logo-icon has-tooltip" data-tooltip="Pi"><img
+                                src="assets/works-with/pi-logo.svg" alt="Pi" width="20" height="20" loading="lazy"
+                                style="background:#1a1a1a;border-radius:50%;padding:3px"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="command-sheet" aria-label="Install command">
+                <article class="terminal-command-row" data-install-copy-scope>
+                    <span class="terminal-prompt" aria-hidden="true">$</span>
+                    <code data-install-command>npx skills add s0md3v/overthink</code>
+                    <button type="button" class="cmd-copy-btn" data-copy-install>Copy</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="using-section field-section" id="using" aria-labelledby="using-title">
+        <div class="field-shell">
+            <div class="using-layout">
+                <div class="using-copy">
+                    <div class="chapter-heading modes-heading">
+                        <h2 id="using-title">Using it</h2>
+                        <p>Just put <code>/overthink</code> before your prompt.</p>
+                    </div>
+
+                    <ul class="using-cases" aria-label="Overthink usage cases">
+                        <li>
+                            <p><code>/overthink</code> this auth refactor. Assume prod data is messy. What breaks first?</p>
+                        </li>
+                        <li>
+                            <p><code>/overthink</code> ship the ugly version Friday or wait two weeks? Be direct.</p>
+                        </li>
+                        <li>
+                            <p><code>/overthink</code> this hero feels clever but not convincing. Find the mismatch.</p>
+                        </li>
+                        <li>
+                            <p><code>/overthink</code> compare these sources. Separate what is known, assumed, and hand-wavy.</p>
+                        </li>
+                        <li>
+                            <p><code>/overthink</code> help me choose a side project. I want weird, useful, and shippable.</p>
+                        </li>
+                    </ul>
+
+                    <p class="using-note">Agents can also trigger overthink automatically when a task looks risky or ambiguous. Automatic runs stay lighter so routine work does not get dragged out. Use <code>/overthink ...</code> when you want the full process every time.</p>
+                </div>
+
+                <aside class="using-brand-panel" aria-label="overthink on GitHub">
+                    <a class="using-brand-lockup" href="https://github.com/s0md3v/overthink" target="_blank"
+                        rel="noopener">
+                        <svg class="brand-mark using-brand-mark" width="32" height="29" viewBox="0 0 38.383751 34.256113"
+                            aria-hidden="true" focusable="false">
+                            <g transform="translate(-80.393053,-102.2403)">
+                                <path class="brand-slash"
+                                    d="m 108.69929,108.09923 c 0.254,-0.44026 0.381,-0.89746 0.381,-1.3716 0,-0.27094 -0.0508,-0.48261 -0.1524,-0.63501 l -1.26153,-3.62372 c -0.0847,-0.1524 -0.2032,-0.2286 -0.3556,-0.2286 -0.28787,0 -0.5588,0.22013 -0.8128,0.6604 l -16.103595,27.88919 c -0.2032,0.3556 -0.3048,0.74507 -0.3048,1.1684 0,0.28787 0.0508,0.51647 0.1524,0.6858 l 1.261532,3.62373 c 0.08467,0.1524 0.211667,0.2286 0.381,0.2286 0.270934,0 0.5334,-0.22013 0.7874,-0.6604 z" />
+                                <g transform="translate(-0.564158)">
+                                    <path class="brand-zero brand-zero-left"
+                                        d="m 89.415411,112.66276 c -0.338667,0 -0.702733,0.11853 -1.0922,0.3556 -0.372533,0.23707 -0.651933,0.52493 -0.8382,0.8636 l -6.35,10.9728 c -0.118533,0.22013 -0.1778,0.42333 -0.1778,0.6096 0,0.4064 0.237067,0.6096 0.7112,0.6096 h 8.602133 c 0.321733,0 0.668867,-0.11853 1.0414,-0.3556 0.389467,-0.23707 0.677333,-0.52493 0.8636,-0.8636 l 6.349997,-10.9728 c 0.11853,-0.22013 0.1778,-0.42333 0.1778,-0.6096 0,-0.4064 -0.2286,-0.6096 -0.6858,-0.6096 z m -0.829733,10.9728 c -0.186267,0.33867 -0.474133,0.62653 -0.8636,0.8636 -0.372533,0.23707 -0.728133,0.3556 -1.0668,0.3556 v 0 c -0.4572,0 -0.6858,-0.2032 -0.6858,-0.6096 0,-0.18627 0.05927,-0.38947 0.1778,-0.6096 l 4.927599,-8.5344 c 0.2032,-0.33867 0.491067,-0.62653 0.8636,-0.8636 0.372533,-0.23707 0.728133,-0.3556 1.0668,-0.3556 v 0 c 0.4572,0 0.6858,0.2032 0.6858,0.6096 0,0.18627 -0.05927,0.38947 -0.1778,0.6096 z" />
+                                    <path class="brand-zero brand-zero-right"
+                                        d="m 110.05298,112.66276 c -0.33867,0 -0.70274,0.11853 -1.09221,0.3556 -0.37253,0.23707 -0.65193,0.52493 -0.8382,0.8636 l -6.35004,10.9728 c -0.11853,0.22013 -0.1778,0.42333 -0.1778,0.6096 0,0.4064 0.23707,0.6096 0.71121,0.6096 h 8.60218 c 0.32173,0 0.66887,-0.11853 1.0414,-0.3556 0.38947,-0.23707 0.67734,-0.52493 0.86361,-0.8636 l 6.35003,-10.9728 c 0.11853,-0.22013 0.1778,-0.42333 0.1778,-0.6096 0,-0.4064 -0.2286,-0.6096 -0.6858,-0.6096 z m -0.82974,10.9728 c -0.18627,0.33867 -0.47413,0.62653 -0.8636,0.8636 -0.37254,0.23707 -0.72814,0.3556 -1.06681,0.3556 v 0 c -0.4572,0 -0.6858,-0.2032 -0.6858,-0.6096 0,-0.18627 0.0593,-0.38947 0.1778,-0.6096 l 4.92763,-8.5344 c 0.2032,-0.33867 0.49107,-0.62653 0.8636,-0.8636 0.37253,-0.23707 0.72814,-0.3556 1.0668,-0.3556 v 0 c 0.45721,0 0.68581,0.2032 0.68581,0.6096 0,0.18627 -0.0593,0.38947 -0.1778,0.6096 z" />
+                                </g>
+                            </g>
+                            <path class="brand-infinity"
+                                d="M 7.6 17.15 C 7.6 10.85 15.6 10.85 19.19 17.15 C 22.78 23.45 30.95 23.45 30.95 17.15 C 30.95 10.85 22.78 10.85 19.19 17.15 C 15.6 23.45 7.6 23.45 7.6 17.15" />
+                        </svg>
+                        <span>overthink</span>
+                    </a>
+                    <a class="github-star-link" href="https://github.com/s0md3v/overthink" target="_blank"
+                        rel="noopener">
+                        <img src="assets/works-with/github-logo.png" alt="" aria-hidden="true" loading="lazy">
+                        <span>View on GitHub</span>
+                    </a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" aria-label="Site footer">
+        <div class="site-footer-shell">
+            <div class="footer-identity">
+                <span class="footer-kicker">Created by</span>
+                <div class="footer-name-row">
+                    <a href="https://somdev.in/" class="footer-name">Somdev Sangwan</a>
+                    <nav class="footer-socials" aria-label="Somdev Sangwan social links">
+                        <a href="https://github.com/s0md3v" target="_blank" rel="noopener"
+                            aria-label="Somdev Sangwan on GitHub">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z">
+                                </path>
+                                <path
+                                    d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19">
+                                </path>
+                                <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544"></path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/s0md3v" target="_blank" rel="noopener"
+                            aria-label="Somdev Sangwan on X">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/s0md3v" target="_blank" rel="noopener"
+                            aria-label="Somdev Sangwan on Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z">
+                                </path>
+                                <path
+                                    d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z">
+                                </path>
+                                <path d="M17.5 6.51L17.51 6.49889"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:s0md3v@gmail.com" aria-label="Email Somdev Sangwan">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7 9L12 12.5L17 9"></path>
+                                <path
+                                    d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/s0md3v" target="_blank" rel="noopener"
+                            aria-label="Somdev Sangwan on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z">
+                                </path>
+                                <path d="M7 17V13.5V10"></path>
+                                <path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17"></path>
+                                <path d="M7 7.01L7.01 6.99889"></path>
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <p class="footer-note">Sorry, we can't offer you any cookies. We aren't collecting any data.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
