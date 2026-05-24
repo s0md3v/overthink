@@ -1359,6 +1359,40 @@ opacity: 1;
     color: #ecffe6;
 }
 
+.install-alt-method {
+    display: grid;
+    gap: 0.45rem;
+    width: min(37.5rem, 100%);
+    max-width: 37.5rem;
+    margin-top: clamp(2rem, 3.4vw, 2.6rem);
+    color: rgba(23, 16, 11, 0.66);
+}
+
+.install-alt-method p {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.55;
+}
+
+.install-alt-method code {
+    color: var(--ink);
+    font-family: 'Berkeley Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.94em;
+}
+
+.install-alt-method a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+.install-alt-method a:hover,
+.install-alt-method a:focus-visible {
+    color: var(--red-ink);
+}
+
 .command-sheet {
     position: relative;
     display: grid;
