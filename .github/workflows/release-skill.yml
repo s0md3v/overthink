@@ -1,0 +1,47 @@
+name: Publish skill release asset
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Package skill
+        run: |
+          set -euo pipefail
+
+          package_dir="${RUNNER_TEMP}/overthink-skill"
+          archive_path="${RUNNER_TEMP}/overthink.zip"
+
+          mkdir -p "${package_dir}"
+          cp -R skill "${package_dir}/overthink"
+
+          (
+            cd "${package_dir}"
+            zip -r "${archive_path}" overthink
+          )
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          if [ "${{ github.event_name }}" = "release" ]; then
+            release_tag="${{ github.event.release.tag_name }}"
+          else
+            release_tag="$(gh release view --json tagName --jq '.tagName')"
+          fi
+
+          gh release upload "${release_tag}" "${RUNNER_TEMP}/overthink.zip#overthink.zip" --clobber
