@@ -20,6 +20,8 @@ npx skills add s0md3v/overthink
 
 Works with Codex, Claude Code, Cursor, Copilot, OpenCode, and other agents that support skills. Restart your agent harness if it does not pick up newly installed skills automatically.
 
+You can also directly download `overthink.zip` from [releases](https://github.com/s0md3v/overthink/releases/) and extract it in the skills directory of your choice.
+
 ## Use
 
 Put `/overthink` before your prompt:
