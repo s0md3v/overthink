@@ -9,8 +9,21 @@ const loadBrainShowcases = (() => {
     };
 })();
 
-if (document.querySelector('[data-mode-showcase], [data-examples-showcase]')) {
-    loadBrainShowcases();
+const firstShowcase = document.querySelector('[data-mode-showcase], [data-examples-showcase]');
+
+if (firstShowcase) {
+    if ('IntersectionObserver' in window) {
+        const brainLoaderObserver = new IntersectionObserver((entries) => {
+            if (!entries.some((entry) => entry.isIntersecting)) return;
+
+            brainLoaderObserver.disconnect();
+            loadBrainShowcases();
+        }, { rootMargin: '0px 0px -20% 0px' });
+
+        brainLoaderObserver.observe(firstShowcase);
+    } else {
+        window.requestIdleCallback?.(loadBrainShowcases) || window.setTimeout(loadBrainShowcases, 1200);
+    }
 }
 
 document.querySelector('.btn-primary')?.addEventListener('click', () => {

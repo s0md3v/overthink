@@ -8,13 +8,8 @@
     <meta name="description"
         content="Overthink is a skill that makes coding agents slow down when guessing is risky: research, debugging, hard choices, taste, and decisions.">
     <link rel="icon" type="image/svg+xml" href="assets/brand/logo.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/brand/hypatia.webp" type="image/webp" media="(min-width: 681px)"
         fetchpriority="high">
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Lexend:wght@300;400;500&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -124,7 +119,7 @@
             </div>
 
             <div class="mode-neuro-showcase" data-mode-showcase aria-label="Interactive overthink thinking modes">
-                <div class="mode-list" role="list" aria-label="Select a thinking mode">
+                <div class="mode-list" role="group" aria-label="Select a thinking mode">
                     <button class="mode-list-button is-active" type="button" data-mode="model"
                         aria-pressed="true">Model</button>
                     <button class="mode-list-button" type="button" data-mode="create"
@@ -195,7 +190,7 @@
 
                 <div class="brain-slot example-brain-slot" data-brain-slot="examples"></div>
 
-                <aside class="mode-readout example-chain-readout" id="example-readout" role="tabpanel"
+                <div class="mode-readout example-chain-readout" id="example-readout" role="tabpanel"
                     aria-live="polite" aria-labelledby="example-tab-product">
                     <h3 data-example-title>Product feature</h3>
                     <p data-example-description>A feature idea usually starts as a vague feeling. Overthink turns it into a user, a promise, a few ways it can fail, and one next build.</p>
@@ -203,7 +198,7 @@
                         <span class="section-label">Mode chain</span>
                         <ol class="example-chain" data-example-chain></ol>
                     </div>
-                </aside>
+                </div>
             </div>
         </div>
     </section>
@@ -361,7 +356,7 @@
                                 <path d="M17.5 6.51L17.51 6.49889"></path>
                             </svg>
                         </a>
-                        <a href="mailto:contact@somdev.in" aria-label="Email Somdev Sangwan">
+                        <a href="mailto:contact&#64;somdev.in" aria-label="Email Somdev Sangwan">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M7 9L12 12.5L17 9"></path>
                                 <path
