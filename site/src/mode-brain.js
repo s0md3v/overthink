@@ -213,7 +213,15 @@ const normalizeModeIds = (modeInput) => {
 const keepMobileControlVisible = (control) => {
     if (!control) return;
     if (!window.matchMedia('(max-width: 680px)').matches) return;
-    control.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+
+    const container = control.closest('.mode-list');
+    if (!container || container.scrollWidth <= container.clientWidth) return;
+
+    const targetLeft = control.offsetLeft - (container.clientWidth - control.offsetWidth) / 2;
+    container.scrollTo({
+        left: Math.max(0, targetLeft),
+        behavior: 'smooth',
+    });
 };
 
 const getColorForModes = (modes, elapsed = 0, reducedMotion = false) => {
